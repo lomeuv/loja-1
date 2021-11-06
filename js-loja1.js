@@ -1,3 +1,4 @@
+"use strict";
 const itens = [
   {
     id: 1,
@@ -22,14 +23,11 @@ const itens = [
   },
 ];
 
-iniciarloja = () => {
+let iniciarloja = function iniarLoja() {
   var conteinerProdutos = document.getElementById("produtos");
   itens.map((val) => {
-    console.log(val.nome);
     conteinerProdutos.innerHTML +=
-      `
-
-      <div class= 'produto-solo'>
+      `<div class= 'produto-solo'>
         <img src=" "` +
       val.img +
       `" />
@@ -45,6 +43,8 @@ iniciarloja = () => {
         </div>
 
       `;
+
+    console.log(val.nome);
   });
 };
 iniciarloja();
